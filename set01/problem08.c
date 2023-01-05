@@ -28,7 +28,7 @@ void input_array(int n, int a[n])
       printf("enter the element\n");
       scanf("%d", &a[i]);
     }
-}
+ } 
 
 int sum_n_array(int n, int a[n])
 {
