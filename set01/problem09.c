@@ -1,38 +1,36 @@
 #include<math.h>
 #include<stdio.h>
-int main()
-{
-  float input();
+float input();
 float square_root(float n);
 void output(float n, float sqrroot);
-}
 int main()
 {
-  float n;squroot;
-  printf("enter the number:");
-  n=input();
-  sqrroot=square_root(n);
+  float n,sqrroot;
+  n=input;
+sqrroot=square_root(n);
   output(n,sqrroot);
+  
 }
-float input();{
+float input()
+{
   float n;
+  printf("enter the number:");
   scanf("%f",&n);
   return n;
 }
-float square_root(float n);
+float square_root(float n)
 {
- float sqrroot,temp;
-  sqrroot=n/2;
-  temp=0;
-  while(sqrrot!=temp){
-    temp=sqrrrot;
-    sqrroot=(n/temp+temp)/2;
-  }
-  return sqrroot;
+  float guess,next;
+  guess=n/2;
+  next=0.5*(guess+n/guess);
+  while(fabs(next-guess)>0.001)/*fabs(obsolute value)*/
+    {
+      guess=next;
+      next=0.5*(guess+n/guess);
+    }
+  return next;
 }
-void output(float n, float sqrroot);
+void output(float n, float sqrroot)
 {
-  printf("Square root of %f is %f",n,sqrroot);
+  printf("square root of %f.2f is %.2f",n,sqrroot);
 }
-
-

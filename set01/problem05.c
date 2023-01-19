@@ -2,42 +2,38 @@
 int input();
 int compare(int a, int b, int c);
 void output(int a, int b, int c, int largest);
-
-int main() {
-  int a, b, c;
-  int largest;
-  a = input();
-  b = input();
-  c = input();
-  largest = compare(a, b, c);
-  output(a, b, c, largest);
-  return 0;
+int main()
+{
+  int a,b,c,largest;
+  a=input();
+  b=input();
+  c=input();
+  largest=compare(a,b,c);
+  output(a,b,c,largest);
 }
-
-int input() {
+int input();
+{
   int n;
-  printf("enter the 3 nos");
-  scanf("%d", &n);
+  printf("enter three num");
+  scanf("%d",&n);
   return n;
 }
-
-int compare(int a, int b, int c) {
-  int largest; 
-  {
-    if (a >= b && a >= c) {
-      largest = a;
-    } else if (b >= a && b >= c) {
-      largest = b;
-    } else {
-      largest = c;
-    }
-  }
+int compare(int a, int b, int c);
+{
+  int largest;
+  if(a>=b && a>=c)
+    largest=a;
+  else if(b>=a && b>=c)
+  largest=b;
+  else 
+  largest=c;
   return largest;
 }
-
-void output(int a, int b, int c, int largest) {
-  printf(" the largest number is %d", largest);
+void output(int a, int b, int c, int largest);
+{
+  printf("the largest of %d%d%d is %d",a,b,c,largest);
 }
+
 
 
 

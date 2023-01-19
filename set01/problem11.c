@@ -21,7 +21,7 @@ float imaginary;
       return 0;
     
   }
-  Complex input_complex();
+  Complex input_complex()
   {
     Complex c1;
     printf("enter the real part\n");
@@ -30,14 +30,14 @@ float imaginary;
     scanf("%f",&c1.imaginary);
     return c1;
   }
-  Complex add_complex(Complex a, Complex b);
+  Complex add_complex(Complex a, Complex b)
     {
     Complex sum;
     sum.real=a.real+b.real;
     sum.imaginary=a.imaginary+b.imaginary;
     return sum;
      }
-  void output(Complex a,Complex b,Complex sum);
+  void output(Complex a,Complex b,Complex sum)
   {
     printf("The sum of %f+%fi and %f+%fi is %f+%fi\n", a.real, a.imaginary, b.real, b.imaginary, sum.real, sum.imaginary);
   }
