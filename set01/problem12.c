@@ -37,7 +37,7 @@ Complex input_complex()
   scanf("%f",&c.imaginary);
   return c;
 }
-void input_n_complex(int n, Complex c[n]);
+void input_n_complex(int n, Complex c[n])
 {
   for(int i=0;i<n;i++)
     {
@@ -47,12 +47,12 @@ void input_n_complex(int n, Complex c[n]);
 }
 Complex add(Complex a,Complex b)
 {
-
+  complex a;
   a.real=a.real+b.real;
   a.imaginary=a.imaginary+b.imaginary;
   return a;
 }
-Complex add_n_complex(int n, Complex c[n]);
+Complex add_n_complex(int n, Complex c[n])
 {
   Complex sum={0,0};
   for(int i=0;i<n;i++)
@@ -61,7 +61,7 @@ Complex add_n_complex(int n, Complex c[n]);
   }
   return sum;
 }
-void output(int n, Complex c[n], Complex result);
+void output(int n, Complex c[n], Complex result)
 {
   printf("the sum is %f+%i",result.real,result.imaginary);
 }
