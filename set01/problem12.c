@@ -13,55 +13,59 @@ void input_n_complex(int n, Complex c[n]);
 Complex add(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
 void output(int n, Complex c[n], Complex result);
+int main()
 {
   int n;
-  Complex sum={0,0};
-  n=get_n();
-  Complex c[n];
+  complex sum={0,0};
+  n=get_n;
+  complex c[n];
   input_n_complex(n,c);
-  add_n_complex(n,c);
+  add_n_comolex(n,c);
+  output(n,c,sum);
+  return 0;
 }
-int get_n();
+int get_n()
 {
   int n;
-  printf("enter the size of the array\n");
-  scanf("%d",&n);
+  printf("enter the size of an array:");
+  scanf("%f",&n);
   return n;
 }
 Complex input_complex()
 {
-  Complex c;
-  printf("enter the real part\n");
+  complex c;
+  printf("enter the real part:");
   scanf("%f",&c.real);
-  printf("enter the imaginary part\n");
+  printf("enter the imaginary part:");
   scanf("%f",&c.imaginary);
   return c;
 }
 void input_n_complex(int n, Complex c[n])
 {
-  for(int i=0;i<n;i++)
+  int i;
+  for(i=0;i<n;i++)
     {
       c[i]=input_complex();
     }
-  
 }
-Complex add(Complex a,Complex b)
+Complex add(Complex a, Complex b)
 {
-  complex a;
+  comlex a;
   a.real=a.real+b.real;
   a.imaginary=a.imaginary+b.imaginary;
   return a;
 }
 Complex add_n_complex(int n, Complex c[n])
 {
-  Complex sum={0,0};
-  for(int i=0;i<n;i++)
-  {
-    sum=add(sum , c[i]);
-  }
+  complex sum={0,0};
+  for (i=0;i<n;i++)
+    {
+      sum=add(sum.c[1])
+    }
   return sum;
 }
 void output(int n, Complex c[n], Complex result)
 {
-  printf("the sum is %f+%i",result.real,result.imaginary);
+  printf("the sum %f+
+%fi\n",result.real,result.imaginary);
 }

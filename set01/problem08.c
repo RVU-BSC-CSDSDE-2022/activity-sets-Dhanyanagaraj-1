@@ -24,7 +24,7 @@ void input_array(int n, int a[n])
 {
   int i;
   for(int i=0;i<n;i++)
-    printf("enter the element");
+    printf("enter the element:\n");
     scanf("%d",&a[i]);
 }
 int sum_n_array(int n, int a[n])
