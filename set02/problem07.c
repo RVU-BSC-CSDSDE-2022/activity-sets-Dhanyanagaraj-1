@@ -36,4 +36,4 @@ void find_area(Triangle *t)
 void output(Triangle t)
 {
    printf("The area of the triangle is %f", t.area);
-}
+} 
