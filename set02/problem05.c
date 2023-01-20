@@ -30,7 +30,7 @@ int find_gcd(int a, int b)
         gcd = i;
     }
   return gcd;
-}
+} 
 
 void output(int a, int b, int gcd)
 {
