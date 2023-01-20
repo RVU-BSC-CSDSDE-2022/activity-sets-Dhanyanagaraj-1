@@ -38,4 +38,4 @@ void output(int n, int result)
     printf("%d is a Composite number.\n",n);
   else
     printf("%d is not a Composite number.\n",n);
-}
+} 
