@@ -20,7 +20,7 @@ int main()
   n=get_n;
   complex c[n];
   input_n_complex(n,c);
-  add_n_comolex(n,c);
+  add_n_complex(n,c);
   output(n,c,sum);
   return 0;
 }
