@@ -1,5 +1,6 @@
 #include <stdio.h>
-typedef struct _triangle {
+typedef struct _triangle
+{
 	float base, altitude, area;
 } Triangle;
 int input_n();
@@ -26,7 +27,7 @@ int input_n()
 {
   int n;
   printf("Enter number of triangle\n");
-  if(scanf("%d",&n));
+  scanf("%d",&n);
   return n;
 }
 
@@ -34,7 +35,7 @@ Triangle input_triangle()
 {
   Triangle t;
   printf("Enter the base and altitude:\n");
-  if(scanf ("%f%f",&t.base,&t.altitude));
+  scanf ("%f%f",&t.base,&t.altitude);
   return t;
 }
 

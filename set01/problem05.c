@@ -11,14 +11,14 @@ int main()
   largest=compare(a,b,c);
   output(a,b,c,largest);
 }
-int input();
+int input()
 {
   int n;
   printf("enter three num");
   scanf("%d",&n);
   return n;
 }
-int compare(int a, int b, int c);
+int compare(int a, int b, int c)
 {
   int largest;
   if(a>=b && a>=c)
@@ -29,7 +29,7 @@ int compare(int a, int b, int c);
   largest=c;
   return largest;
 }
-void output(int a, int b, int c, int largest);
+void output(int a, int b, int c, int largest)
 {
   printf("the largest of %d%d%d is %d",a,b,c,largest);
 }

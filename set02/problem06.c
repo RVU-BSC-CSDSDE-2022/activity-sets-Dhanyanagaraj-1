@@ -5,7 +5,7 @@ void output(char *a, char *reverse_a);
 
 int main()
 {
-  char str[100],rev_str[100];
+  char a[100],b[100];
   input_string(str);
   str_reverse(str,rev_str);
   output(str,rev_str);
@@ -14,31 +14,22 @@ int main()
 
 void input_string(char *a)
 {
+  
   printf("Enter a string:\n");
-  if(scanf("%s",a));
+  scanf("%s",a);
 }
 
 void str_reverse(char *str, char *rev_str)
 {
-  int i=0,j=0,k;
-  while(1)
-    {
-      if(str[i]!='\0')
-      {
-        j=i;
-        break;
-      }
-      i++;
+  int i=0, j=0, len;
+  for(i = 0; str[i]!='\0'; i++);
+  len = i--;
+  for(int i = len-1; i>=0; i--)
+  {
+      rev_str[j] = str[i];
+      j++;
     }
-
-  for(j=0 ; j<i ; j++)
-    {
-      rev_str[k]=str[i];
-      k++;
-    }
-  
 }
-
 void output(char *a, char *reverse_a)
 {
   printf("Normal string: %s\n",a);
