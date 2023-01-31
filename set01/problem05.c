@@ -14,7 +14,7 @@ int main()
 int input()
 {
   int n;
-  printf("enter three num");
+  printf("enter the num");
   scanf("%d",&n);
   return n;
 }
@@ -31,7 +31,7 @@ int compare(int a, int b, int c)
 }
 void output(int a, int b, int c, int largest)
 {
-  printf("the largest of %d%d%d is %d",a,b,c,largest);
+  printf("the largest of %d ,%d and %d is %d",a,b,c,largest);
 }
 
 

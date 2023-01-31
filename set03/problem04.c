@@ -1,27 +1,31 @@
 #include<stdio.h>
 int main()
 {
-int n, t1 = 0, t2 = 1, nextTerm = 0, i;
+int first=0, second=1,i ,n ,sum=0;
   }
  int input()
 {
-printf("Enter the n value:");
+  int n;
+printf("Enter the number of terms:");
 scanf("%d", &n);
   }
   int find_fibo(int n)
 {
-if(n == 0 || n == 1) 
-printf(“%d”, n); 
-else
-nextTerm = t1 + t2;
-for (i = 3; i <= n; ++i)
-{
-t1 = t2;
-t2 = nextTerm;
-nextTerm = t1 + t2;
+  printf("Fibonacci series:");
+  for(i=0;i<n;i++)
+    {
+      if(i<=1)
+      {
+        sum=i;
+      }
+      else
+      {
+        sum=first+second;
+        first=second;
+        second=sum;
+      }
+      printf("%d",sum);
+    }
+  return 0;
 }
-  }
- void output(int n, int fibo)
-  {
-printf("%d", t2);
-}
+ 

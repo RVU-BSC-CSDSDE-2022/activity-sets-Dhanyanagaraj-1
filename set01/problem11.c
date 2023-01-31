@@ -1,9 +1,9 @@
-  #include<stdio.h>
+#include<stdio.h>
 
 struct complex
 {
- float real;
-float imaginary;
+  float real;
+  float imaginary;
 };    
   typedef struct complex Complex;
   Complex input_complex();
@@ -25,7 +25,7 @@ Complex input_complex()
   printf("enter the real part\n");
   scanf("%f",&c1.real);
   printf("enter the imaginary part\n");
-  scanrf("%f",&c1.imaginary);
+  scanf("%f",&c1.imaginary);
   return c1;
 }
 Complex add_complex(Complex a, Complex b)
