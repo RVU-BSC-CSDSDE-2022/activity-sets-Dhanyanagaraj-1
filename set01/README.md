@@ -124,15 +124,14 @@ void output(int n, int sum);
 
 ***Input***
 ```
-1
-2
+
 3
 ```
 
 
 ***Output***
 ```
-The largest of 1,2 and 3 is 3.
+ 3 term sum is 6.
 ```
 
 ---
