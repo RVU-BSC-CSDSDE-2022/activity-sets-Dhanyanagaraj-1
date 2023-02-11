@@ -19,7 +19,7 @@ int input()
 
 int sum_n_nos(int n)
 {
-    int sum;
+    int sum=0;
     for(int i=1; i<=n; i++)
       {
         sum=sum+i;

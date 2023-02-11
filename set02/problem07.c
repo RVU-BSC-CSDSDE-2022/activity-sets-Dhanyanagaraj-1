@@ -4,11 +4,11 @@ typedef struct _triangle {
 } Triangle;
 
 Triangle input_triangle();
-void find_area(Traingle *t);
+void find_area(Triangle *t);
 void output(Triangle t);
 int main()
 {
-  triangle t;
+  Triangle t;
   t= input_triangle();
   find_area(&t);
   output(t);
@@ -16,14 +16,14 @@ int main()
 }
 Triangle input_triangle()
 {
-  triangle t;
+  Triangle t;
   printf("enter the base of triangle:");
   scanf("%f",&t.base);
   printf("enter the altitude of triangle:");
   scanf("%f",&t.altitude);
   return t;
 }
-void find_area(Traingle *t)
+void find_area(Triangle *t)
 {
   t->area=((t->base)*(t->altitude))*0.5;
 }

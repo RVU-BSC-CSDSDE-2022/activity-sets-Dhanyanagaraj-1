@@ -29,7 +29,7 @@ int main()
 int get_n()
 {
     int n;
-    printf("Enter how many numbers to add\n");
+    printf("Enter the number of array\n");
     scanf("%d", &n);
     return n;
 }

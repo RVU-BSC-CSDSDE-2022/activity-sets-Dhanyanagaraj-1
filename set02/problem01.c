@@ -1,7 +1,7 @@
 #include<stdio.h>
 void input(float *base, float *height);
 void find_area(float base , float height, float *area);
-void output(float base, float height, float area);
+void output(float base, float height, float area)
 int main()
 {
   float base,height,area;
@@ -13,11 +13,11 @@ int main()
 void input(float *base, float *height)
 {
   printf("enter the base and height:");
-  scanf("%f%f",base,height);
+  scanf("%f %f",base,height);
 }
 void find_area(float base , float height, float *area)
 {
-  *area=(base*height)*1/2;
+  *area=base*height*0.5;
 }
 void output(float base, float height, float area)
 {
