@@ -1,17 +1,81 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+
+typedef struct {
+    int num, den;
+} Fraction;
+
+Fraction input_fraction();
+int find_gcd(int a, int b);
+Fraction find_smallest_fraction(Fraction f1, Fraction f2, Fraction f3);
+void output(Fraction f1, Fraction f2, Fraction f3,Fraction smallest);
+
+
 int main()
 {
-    int a, b, c, small;
-    printf("Enter three numbers : ");
-    scanf("%d%d%d", &a, &b, &c);
-   if(a<b && a<c)
-        small = a;
-    else if(b<a && b<c)
-        small = b;
+  Fraction f1,f2,f3,smallest;
+  f1=input_fraction();
+  f2=input_fraction();
+  f3=input_fraction();
+  smallest=find_smallest_fraction(f1,f2,f3);
+  output(f1,f2,f3,smallest);
+  return 0;
+}
+
+Fraction input_fraction()
+{
+  Fraction f;
+  printf("Enter the numerator\n");
+  scanf("%d", &f.num);
+  printf("Enter the denominator\n");
+  scanf("%d", &f.den);
+  return f;
+}
+
+int find_gcd(int a, int b)
+{
+  int i=0 , gcd ;
+  for(i=1;i<=a&&i<=b;i++)
+    {
+      if(a%i==0&&b%i==0)
+        gcd=i;
+    }
+
+  return gcd;
+}
+
+
+Fraction find_smallest_fraction(Fraction f1, Fraction f2, Fraction f3)
+{
+    Fraction org1,org2,org3;
+    org1=f1,org2=f2, org3=f3;
+    if(f1.den==f2.den==f3.den)
+    {
+        if(f1.num<f2.num && f1.num<f3.num)
+          return f1;
+        if(f2.num<f1.num && f2.num<f3.num)
+          return f2;
+        else return f3;
+    }
     else
-        small = c;
-    printf("\nSmallest number is: %d", small);
-    getch();
-    return 0;
+    {
+    int gcd=find_gcd(f1.den, f2.den);
+    gcd=(gcd, f3.den);
+    int lcm=(f1.den*f2.den*f3.den)/gcd;
+    f1.num=lcm/f1.num;
+    f2.num=lcm/f2.num;
+    f3.num=lcm/f3.num;
+    f1.den=lcm;
+    f2.den=lcm;
+    f3.den=lcm;
+    if(f1.num<f2.num && f1.num<f3.num)
+      return org1;
+      if(f2.num<f1.num && f2.num<f3.num)
+        return org2;
+         else return org3;
+      }
+}
+
+void output(Fraction f1, Fraction f2,Fraction f3,  Fraction smallest)
+{
+  printf("The smallest of %d/%d and %d/%d and %d/%d is %d/%d", f1.num,f1.den,f2.num,f2.den, f3.num, f3.den,smallest.num, smallest.den);
 }

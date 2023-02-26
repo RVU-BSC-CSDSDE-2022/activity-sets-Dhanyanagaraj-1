@@ -1,4 +1,5 @@
 #include<stdio.h>
-main(){
+main()
+{
   printf("My name is Dhanya");
 }

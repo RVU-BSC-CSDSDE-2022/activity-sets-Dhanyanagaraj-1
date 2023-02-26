@@ -240,17 +240,20 @@ The sum of 2+3i and 4+5i is 6+8i
 
 ***Function Declarations***
 ```c
-struct _complex {
-	float real,imaginary;
+
+struct complex {
+	float real;
+	float imaginary;
 };
-typedef struct _complex Complex;
+typedef struct complex Complex;
 
 int get_n();
 Complex input_complex();
 void input_n_complex(int n, Complex c[n]);
-Complex add(Complex a, Complex b);
+Complex add_complex(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
-void output(int n, Complex c[n], Complex result);
+void output(int n, Complex c[n], Complex sum);
+
 ```
 
 ***Input***

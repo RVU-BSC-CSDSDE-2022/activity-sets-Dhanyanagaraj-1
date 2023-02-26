@@ -16,32 +16,28 @@ int main()
   output(string, substring, index);
   return 0;
 }
-
-
-
-
 void input_string(char* a, char* b)
 {
   printf("Enter the string\n");
   scanf("%s", a);
   printf("Enter the substring\n");
   scanf("%s", b);
-}
-
-
-
+  }
 int sub_str_index(char* string, char* substring){
   int i=0,j=0;
-  while (string[i]!='\0' ){
+  while (string[i]!='\0' )
+  {
   
-    if (string[i+j]==substring[j]){
-      
+    if (string[i+j]==substring[j])
+    {
       j++;
-      if(substring[j]=='\0'){
+      if(substring[j]=='\0')
+      {
         return i;
       }
     }
-    else{
+    else
+    {
       j=0;
       i++;
     }
